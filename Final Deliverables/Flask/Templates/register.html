@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>D-Naturalist</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+        content="Login Form" />
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}" />
+</head>
+
+<body>
+
+    <!-- form section start -->
+    <section class="w3l-mockup-form">
+        <div class="container">
+            <!-- /form -->
+            <div class="workinghny-form-grid">
+                <div class="main-mockup">
+                    <div class="alert-close">
+                        <span class="fa fa-close"></span>
+                    </div>
+                    <div class="w3l_form align-self">
+                        <div class="left_grid_info">
+                            <img src="{{ url_for('static', filename='images/bg.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="content-wthree">
+                        <h2>Register Now</h2>
+                        <p></p>
+
+                        <form action="/add_user" method="post">
+                            <input type="text" class="name" name="name"  required placeholder="Name">
+                            <input type="email" class="email" name="email" required placeholder="Email">
+                            <input type="password" class="password" name="password" required placeholder="Password">
+                            <button name="submit" class="btn" type="submit">Register</button>
+                        </form>
+                        <div class="social-icons">
+                            <p>Have an account! <a href="/login">Login</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //form -->
+        </div>
+    </section>
+    <!-- //form section start -->
+
+   
+    <script>
+        $(document).ready(function (c) {
+            $('.alert-close').on('click', function (c) {
+                $('.main-mockup').fadeOut('slow', function (c) {
+                    $('.main-mockup').remove();
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
